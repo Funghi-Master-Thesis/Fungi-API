@@ -1,0 +1,31 @@
+<!-- templates/predictions.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 5 Predictions</title>
+    <style>
+        /* Optional: Add CSS for better styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .prediction {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top 5 Predictions</h1>
+    <ol>
+    {% for prediction in predictions %}
+        <li>
+            <strong>Class:</strong> {{ prediction.class_name }}<br>
+            <strong>Probability:</strong> {{ prediction.probability|round(2) }}%<br>
+        </li>
+    {% endfor %}
+    </ol>
+    <h2>Uploaded Image</h2>
+    <img src="{{ image_path }}" alt="Uploaded Image">
+</body>
+</html>
