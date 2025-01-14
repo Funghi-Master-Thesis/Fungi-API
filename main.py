@@ -11,7 +11,6 @@ from fastapi.responses import HTMLResponse, Response
 from PIL import Image
 import io
 import torchvision.transforms as transforms
-from torchvision.transforms import v2
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
 from fastapi.staticfiles import StaticFiles
